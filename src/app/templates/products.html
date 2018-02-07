@@ -10,11 +10,13 @@
             </div>
         </div>
         <div class="tableResponsive">
-            <table>
+            <table id="primary-table">
                 <thead>
                     <tr>
-                        <th class="btn-primary">
-                            Show Image
+                        <th>
+                        <button class="btn-primary" (click) = 'toggleImage()'>
+                            {{showImage ? 'Hide' : 'Show'}} Image
+                        </button>
                         </th>
                         <th>Product</th>
                         <th>Code</th>
@@ -25,7 +27,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let product of products'>
-                        <td></td>
+                        <td *ngIf='showImage'><img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
                         <td>{{product.productName}}</td>
                         <td>{{product.productCode}}</td>
                         <td>{{product.available}}</td>

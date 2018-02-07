@@ -7,6 +7,10 @@ import { Component } from "@angular/core";
 
 export class ProductList{
     productsTitle:string='Products';
+    imageWidth:number = 50;
+    imageMargin:number = 2;
+    showImage : boolean = false;
+    listFilter:string = 'Cart';
     products:any[] = [
         {
             "productId" : 2,
@@ -17,7 +21,7 @@ export class ProductList{
              "description" : "15 Galon Capacity of data",
              "price" : 32.99,
              "rating" : 4.2,
-             "imageUrl" : "https://openclipart.org/detail/296014/penrose-pentagon"
+             "imageUrl" : "http://www.gstatic.com/webp/gallery/1.jpg"
         },
         {
             "productId" : 3,
@@ -28,7 +32,11 @@ export class ProductList{
              "description" : "18 Galon Capacity of data",
              "price" : 42.99,
              "rating" : 4.7,
-             "imageUrl" : "https://openclipart.org/detail/296030/eye-5"
+             "imageUrl" : "http://www.gstatic.com/webp/gallery/2.jpg"
         }
     ];
+
+    toggleImage(): void{
+        this.showImage = !this.showImage;
+    }
 }
