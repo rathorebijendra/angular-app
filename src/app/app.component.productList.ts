@@ -1,5 +1,6 @@
 import { Component,OnInit } from "@angular/core";
 import {IProduct} from './app.component.interfaces.Iproduct';
+import { ProductService } from "./app.services.product";
 
 @Component({
     selector:'products',
@@ -13,37 +14,21 @@ export class ProductList implements OnInit{
     imageMargin:number = 2;
     showImage : boolean = false;
     listFilter:string = 'Cart';
+    _productService:ProductService;
+    errorMessage:string;
 
-    products:IProduct[] = [
-        {
-            "productId" : 2,
-             "productName": "Garden Cart",
-             "productCode" : "GDN-0023",
-             "releaseDate" : "March 18, 2016",
-             "available" : true,
-             "description" : "15 Galon Capacity of data",
-             "price" : 32.99,
-             "rating" : 4.2,
-             "imageUrl" : "http://www.gstatic.com/webp/gallery/1.jpg"
-        },
-        {
-            "productId" : 3,
-             "productName": "Natural show",
-             "productCode" : "GDN-0024",
-             "releaseDate" : "March 19, 2017",
-             "available" : true,
-             "description" : "18 Galon Capacity of data",
-             "price" : 42.99,
-             "rating" : 4.7,
-             "imageUrl" : "http://www.gstatic.com/webp/gallery/2.jpg"
-        }
-    ];
+    products:IProduct[] = [];
 
+    constructor(_productService:ProductService){
+        this._productService = _productService;
+    }
     toggleImage(): void{
         this.showImage = !this.showImage;
     }
 
     ngOnInit():void{
+        this._productService.getProducts().subscribe(products=>this.products=products
+            ,error=>this.errorMessage=<any>error);
        console.log('Product List is created'); 
     }
 }
