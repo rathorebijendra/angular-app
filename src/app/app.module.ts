@@ -5,10 +5,11 @@ import { AppComponent }  from './app.component';
 import {HomeComponent} from './app.components.component.home';
 import {ProductList} from './app.component.productList';
 import {FormsModule} from '@angular/forms';
+import {ConvertToSpacePipe} from './app.component.pipes.space.transform';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule],
-  declarations: [ AppComponent,HomeComponent,ProductList],
+  declarations: [ AppComponent,HomeComponent,ProductList,ConvertToSpacePipe],
   bootstrap:    [ AppComponent, HomeComponent,ProductList],
 })
 export class AppModule { }

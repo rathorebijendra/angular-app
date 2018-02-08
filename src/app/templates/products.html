@@ -32,7 +32,7 @@
                     <tr *ngFor='let product of products'>
                         <td *ngIf='showImage'><img [src]='product.imageUrl' [title]='product.productName' [style.width.px]='imageWidth' [style.margin.px]='imageMargin'></td>
                         <td>{{product.productName | lowercase}}</td>
-                        <td>{{product.productCode}}</td>
+                        <td>{{product.productCode | TransformerPipe:'-'}}</td>
                         <td>{{product.available}}</td>
                         <td>{{product.price | currency : 'USD':true:'1.2-2'| lowercase}}</td>
                         <td>{{product.rating}}</td>
