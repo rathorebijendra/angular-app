@@ -1,0 +1,62 @@
+[
+    {
+        "productId": 1,
+        "productName": "Garden Cart",
+        "productCode": "GDN-0023",
+        "releaseDate": "March 18, 2016",
+        "description": "16 Gallon capacity",
+        "price": 42.56,
+        "rating": 4.2,
+        "imaheUrl": "http://www.gstatic.com/webp/gallery/1.jpg"
+    },
+    {
+        "productId": 2,
+        "productName": "Tree Cart",
+        "productCode": "GDN-0024",
+        "releaseDate": "March 19, 2016",
+        "description": "17 Gallon capacity",
+        "price": 43.56,
+        "rating": 4.3,
+        "imaheUrl": "http://www.gstatic.com/webp/gallery/2.jpg"
+    },
+    {
+        "productId": 3,
+        "productName": "Banyan Cart",
+        "productCode": "GDN-0025",
+        "releaseDate": "March 20, 2016",
+        "description": "18 Gallon capacity",
+        "price": 44.56,
+        "rating": 4.4,
+        "imaheUrl": "http://www.gstatic.com/webp/gallery/1.jpg"
+    },
+    {
+        "productId": 4,
+        "productName": "Flip Cart",
+        "productCode": "GDN-0026",
+        "releaseDate": "March 21, 2016",
+        "description": "19 Gallon capacity",
+        "price": 45.56,
+        "rating": 4.5,
+        "imaheUrl": "http://www.gstatic.com/webp/gallery/2.jpg"
+    },
+    {
+        "productId": 5,
+        "productName": "Amazon Cart",
+        "productCode": "GDN-0027",
+        "releaseDate": "March 22, 2016",
+        "description": "20 Gallon capacity",
+        "price": 46.56,
+        "rating": 4.6,
+        "imaheUrl": "http://www.gstatic.com/webp/gallery/1.jpg"
+    },
+    {
+        "productId": 6,
+        "productName": "SnapDeal Cart",
+        "productCode": "GDN-0028",
+        "releaseDate": "March 23, 2016",
+        "description": "21 Gallon capacity",
+        "price": 47.56,
+        "rating": 4.7,
+        "imaheUrl": "http://www.gstatic.com/webp/gallery/2.jpg"
+    }
+]

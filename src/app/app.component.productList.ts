@@ -6,6 +6,7 @@ import { ProductService } from "./app.services.product";
     selector:'products',
     templateUrl:'./templates/products.html',
     styleUrls:['./app.component.styles.products.css'],
+    providers:[ProductService],
 })
 
 export class ProductList implements OnInit{
@@ -14,14 +15,11 @@ export class ProductList implements OnInit{
     imageMargin:number = 2;
     showImage : boolean = false;
     listFilter:string = 'Cart';
-    _productService:ProductService;
     errorMessage:string;
 
     products:IProduct[] = [];
 
-    constructor(_productService:ProductService){
-        this._productService = _productService;
-    }
+    constructor(private _productService:ProductService){}
     toggleImage(): void{
         this.showImage = !this.showImage;
     }
